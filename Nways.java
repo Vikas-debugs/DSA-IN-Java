@@ -143,5 +143,26 @@
 //     System.out.println(total);
 //    }  
 //   }
+
+
+//   number of way of invite guest in party , all combinations  or in pair or sinlge
+ public class Nways{
+    public static  int  guest(int n ) {
+        if(n<=1){
+            return 1;
+        }
+        // single 
+        int  ways1= guest(n-1);
+        // pair
+        int ways2 = (n-1)* guest(n-2);
+        return ways1 + ways2;
+    }
+   public static void main(String[] args) {
+    int n= 4;
+    System.out.println(guest(n));
+   }
+    
+ }
+
  
  
